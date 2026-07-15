@@ -1,0 +1,299 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Spacing Grid (8px baseline) */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem;  /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1.00rem; /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.50rem; /* 24px */
+  --space-8: 2.00rem; /* 32px */
+  --space-10: 2.50rem;/* 40px */
+  --space-12: 3.00rem;/* 48px */
+  --space-16: 4.00rem;/* 64px */
+
+  /* Border Radii (Figma style) */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  
+  /* SaaS Premium Dark Theme / WhatsApp Dark (default) */
+  --theme-bg: #0b141a;
+  --theme-card: #111b21;
+  --theme-card-hover: #202c33;
+  --theme-text: #e9edef;
+  --theme-muted: #8696a0;
+  --theme-accent: #00a884;
+  --theme-accent-hover: #00bfa5;
+  --theme-border: #222d34;
+  --theme-border-hover: #2a3942;
+  --theme-success: #00e516;
+  --theme-error: #ea0038;
+  --theme-warning: #ffd300;
+  
+  --theme-topbar: #202c33;
+  --theme-bubble-sent: #005c4b;
+  --theme-bubble-received: #202c33;
+  --theme-bubble-sent-text: #e9edef;
+  --theme-bubble-received-text: #e9edef;
+  --theme-input-bg: #2a3942;
+}
+
+/* Accessible light theme / WhatsApp Light */
+.theme-light,
+:root.theme-light {
+  --theme-bg: #efeae2;
+  --theme-card: #ffffff;
+  --theme-card-hover: #f0f2f5;
+  --theme-text: #111b21;
+  --theme-muted: #667781;
+  --theme-accent: #008069;
+  --theme-accent-hover: #006653;
+  --theme-border: #e9edef;
+  --theme-border-hover: #cbd5e1;
+  --theme-success: #198754;
+  --theme-error: #dc3545;
+  --theme-warning: #ffc107;
+  
+  --theme-topbar: #f0f2f5;
+  --theme-bubble-sent: #d9fdd3;
+  --theme-bubble-received: #ffffff;
+  --theme-bubble-sent-text: #111b21;
+  --theme-bubble-received-text: #111b21;
+  --theme-input-bg: #ffffff;
+}
+
+/* Pitch Black AMOLED theme */
+.theme-amoled,
+:root.theme-amoled {
+  --theme-bg: #000000;
+  --theme-card: #0c0c0c;
+  --theme-card-hover: #161616;
+  --theme-text: #ffffff;
+  --theme-muted: #888888;
+  --theme-accent: #00a884;
+  --theme-accent-hover: #00c49a;
+  --theme-border: #1a1a1a;
+  --theme-border-hover: #262626;
+  --theme-success: #00e516;
+  --theme-error: #ea0038;
+  --theme-warning: #ffd300;
+  
+  --theme-topbar: #0c0c0c;
+  --theme-bubble-sent: #005c4b;
+  --theme-bubble-received: #1a1a1a;
+  --theme-bubble-sent-text: #ffffff;
+  --theme-bubble-received-text: #ffffff;
+  --theme-input-bg: #1a1a1a;
+}
+
+/* Material theme (mapped to WhatsApp Light for workspace aesthetic) */
+.theme-material,
+:root.theme-material {
+  --theme-bg: #efeae2;
+  --theme-card: #ffffff;
+  --theme-card-hover: #f0f2f5;
+  --theme-text: #111b21;
+  --theme-muted: #667781;
+  --theme-accent: #008069;
+  --theme-accent-hover: #006653;
+  --theme-border: #e9edef;
+  --theme-border-hover: #cbd5e1;
+  --theme-success: #198754;
+  --theme-error: #dc3545;
+  --theme-warning: #ffc107;
+  
+  --theme-topbar: #f0f2f5;
+  --theme-bubble-sent: #d9fdd3;
+  --theme-bubble-received: #ffffff;
+  --theme-bubble-sent-text: #111b21;
+  --theme-bubble-received-text: #111b21;
+  --theme-input-bg: #ffffff;
+}
+
+/* Cyberpunk Dark */
+.theme-cyberpunk,
+:root.theme-cyberpunk {
+  --theme-bg: #08090d;
+  --theme-card: #0f1118;
+  --theme-card-hover: #161822;
+  --theme-text: #10b981;
+  --theme-muted: #4b5563;
+  --theme-accent: #f59e0b;
+  --theme-accent-hover: #d97706;
+  --theme-border: #1f2937;
+  --theme-border-hover: #374151;
+  --theme-success: #10b981;
+  --theme-error: #ef4444;
+  --theme-warning: #f59e0b;
+  
+  --theme-topbar: #0f1118;
+  --theme-bubble-sent: #1e251f;
+  --theme-bubble-received: #161822;
+  --theme-bubble-sent-text: #10b981;
+  --theme-bubble-received-text: #10b981;
+  --theme-input-bg: #08090d;
+}
+
+/* Neon Cosmic */
+.theme-neon,
+:root.theme-neon {
+  --theme-bg: #0d0814;
+  --theme-card: #140f1f;
+  --theme-card-hover: #1d162d;
+  --theme-text: #f43f5e;
+  --theme-muted: #70588f;
+  --theme-accent: #d946ef;
+  --theme-accent-hover: #c084fc;
+  --theme-border: #2e1d44;
+  --theme-border-hover: #452b66;
+  --theme-success: #10b981;
+  --theme-error: #ef4444;
+  --theme-warning: #f59e0b;
+  
+  --theme-topbar: #140f1f;
+  --theme-bubble-sent: #2d162d;
+  --theme-bubble-received: #1d162d;
+  --theme-bubble-sent-text: #f43f5e;
+  --theme-bubble-received-text: #f43f5e;
+  --theme-input-bg: #0d0814;
+}
+
+/* WhatsApp wallpaper pattern container */
+.whatsapp-bg {
+  background-color: var(--theme-bg);
+  position: relative;
+}
+
+.whatsapp-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+  background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+/* Re-adjust opacity if needed for specific themes */
+.theme-light .whatsapp-bg::before,
+.theme-material .whatsapp-bg::before {
+  opacity: 0.06;
+}
+
+.theme-amoled .whatsapp-bg::before {
+  opacity: 0.15;
+}
+
+.theme-cyberpunk .whatsapp-bg::before,
+.theme-neon .whatsapp-bg::before {
+  opacity: 0.1;
+}
+
+/* Base resets & focus indicators */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom focus ring matching keyboard navigation access standards */
+*:focus-visible {
+  outline: 2px solid var(--theme-accent);
+  outline-offset: 2px;
+}
+
+/* Accessibility: screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Subtle, native scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-border-hover);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-accent);
+}
+
+/* Card Hover effect */
+.premium-card-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.premium-card-hover:hover {
+  transform: translateY(-1px);
+  border-color: var(--theme-border-hover);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Clean, modern overlay skeletons */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 25%,
+    rgba(255, 255, 255, 0.08) 37%,
+    rgba(255, 255, 255, 0.03) 63%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+.theme-light .shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.03) 25%,
+    rgba(0, 0, 0, 0.06) 37%,
+    rgba(0, 0, 0, 0.03) 63%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+/* WebRTC peer layouts */
+.peer-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-4);
+  width: 100%;
+}
