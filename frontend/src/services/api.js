@@ -7,7 +7,14 @@ const getApiUrl = () => {
     return import.meta.env.VITE_API_URL;
   }
   if (typeof window !== 'undefined' && window.location.hostname) {
-    return `http://${window.location.hostname}:5000/api`;
+    const isLocal = window.location.hostname === 'localhost' || 
+                    window.location.hostname === '127.0.0.1' || 
+                    window.location.hostname.startsWith('192.168.') || 
+                    window.location.hostname.startsWith('10.') || 
+                    window.location.hostname.startsWith('172.');
+    if (isLocal) {
+      return `http://${window.location.hostname}:5000/api`;
+    }
   }
   return 'http://localhost:5000/api';
 };
